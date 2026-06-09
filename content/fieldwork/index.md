@@ -20,11 +20,6 @@ sections:
         .fw-region{font-size:.72rem;color:#4a9aab;letter-spacing:.1em;text-transform:uppercase;margin:0 0 .35rem}
         .fw-title{font-size:1.15rem;font-weight:400;margin:0 0 .5rem;color:#111}
         .fw-text{font-size:.95rem;line-height:1.65;color:#333;font-weight:300;margin:0}
-        .fw-list{list-style:none;padding:0;margin:1.1rem 0 0}
-        .fw-list li{padding:.55rem .25rem;font-size:.92rem;color:#333;font-weight:300;cursor:pointer;border-top:1px solid #eee;display:flex;align-items:center;gap:.6rem}
-        .fw-list li:hover{color:#4a9aab}
-        .fw-list li.active{color:#357989;font-weight:500}
-        .fw-list .fw-dot{width:7px;height:7px;border-radius:50%;background:#4a9aab;flex:none}
         </style>
 
         <div class="fw-app">
@@ -33,10 +28,9 @@ sections:
             <div class="fw-card">
               <p class="fw-region" id="fw-region">Field sites</p>
               <p class="fw-title" id="fw-title">Where we work</p>
-              <p class="fw-text" id="fw-text">Our field campaigns span the Antarctic and Greenland ice sheets and the Texas Gulf Coast. Click a marker &mdash; or a site below &mdash; to read more.</p>
+              <p class="fw-text" id="fw-text">Our field campaigns span the Antarctic and Greenland ice sheets, the North Cascades, and the Texas Gulf Coast. Click a marker to read more.</p>
               <img id="fw-img" alt="" style="display:none;width:100%;margin-top:.9rem">
             </div>
-            <ul class="fw-list" id="fw-list"></ul>
           </aside>
         </div>
 
@@ -51,10 +45,14 @@ sections:
             {name:"Thwaites Glacier",region:"West Antarctica",lat:-75.5,lon:-106.75,img:"",text:"Phase-sensitive radar (ApRES) and polarimetric surveys of basal conditions and englacial deformation on one of Antarctica's most rapidly changing glaciers."},
             {name:"Kamb Ice Stream",region:"Siple Coast, Antarctica",lat:-82.4,lon:-140.0,text:"Polarimetric radar studies of ice fabric and basal properties on a stagnated West Antarctic ice stream."},
             {name:"Beardmore Glacier",region:"Transantarctic Mountains",lat:-83.5,lon:171.0,text:"ApRES and radar surveys of a major outlet glacier draining the East Antarctic Ice Sheet."},
+            {name:"Flask Glacier",region:"Antarctic Peninsula",lat:-65.8,lon:-62.3,text:"Radar and field studies of a tributary glacier in the former Larsen B embayment, where ice-shelf collapse reshaped glacier flow."},
+            {name:"Hercules Dome",region:"West Antarctica",lat:-86.5,lon:-105.0,text:"Geophysical and radar surveys at a high-elevation ice dome — a candidate site for a deep ice core recording past ice-sheet and climate history."},
+            {name:"South Pole",region:"East Antarctic Plateau",lat:-89.99,lon:0.0,text:"Firn, radar, and altimetry studies on the polar plateau near Amundsen–Scott South Pole Station."},
             {name:"Rothera",region:"Antarctic Peninsula",lat:-67.57,lon:-68.13,text:"Logistics hub for radar and geophysical campaigns on the Antarctic Peninsula."},
             {name:"EastGRIP",region:"Northeast Greenland",lat:75.63,lon:-35.99,text:"Polarimetric radar and firn studies at the East Greenland Ice-core Project on the Northeast Greenland Ice Stream."},
             {name:"Eqip Sermia",region:"West Greenland",lat:69.77,lon:-50.22,text:"Field studies of a fast-flowing tidewater outlet glacier in West Greenland."},
-            {name:"Texas Gulf Coast",region:"Houston, Texas",lat:29.4,lon:-94.9,text:"GNSS and InSAR networks measuring vertical land motion and relative sea-level change along the Gulf Coast."}
+            {name:"Texas Gulf Coast",region:"Houston, Texas",lat:29.4,lon:-94.9,text:"GNSS and InSAR networks measuring vertical land motion and relative sea-level change along the Gulf Coast."},
+            {name:"North Cascades",region:"Washington, USA",lat:48.7,lon:-121.2,text:"Glacier and seasonal-snow studies in the North Cascades of Washington State."}
           ];
           // -----------------------------------------------------------------
           var W=460,H=460,R=212;
@@ -77,8 +75,6 @@ sections:
                 g.append("circle").attr("class","mk").attr("r",4.5).attr("fill","#4a9aab").attr("stroke","#fff").attr("stroke-width",1.3).style("pointer-events","none");
                 s._g=g;
               });
-              var ul=d3.select("#fw-list");
-              SITES.forEach(function(s,i){ul.append("li").html('<span class="fw-dot"></span>'+s.name).on("click",function(){select(i,true);});});
               redraw(); start_auto();
             }).catch(function(){d3.select("#fw-text").text("Couldn't load the map data — check the connection and reload.");});
 
@@ -96,7 +92,6 @@ sections:
               d3.select("#fw-region").text(s.region); d3.select("#fw-title").text(s.name); d3.select("#fw-text").text(s.text);
               var im=d3.select("#fw-img"); if(s.img){im.attr("src",s.img).attr("alt",s.name).style("display","block");}else{im.style("display","none");}
               SITES.forEach(function(t,idx){t._g.select(".mk").attr("r",idx===i?6.5:4.5).attr("fill",idx===i?"#357989":"#4a9aab");});
-              d3.selectAll("#fw-list li").classed("active",function(d,idx){return idx===i;});
               stop_auto();
               if(fly){var cur=proj.rotate(),ip=d3.interpolate(cur,[-s.lon,-s.lat]);d3.transition().duration(800).tween("r",function(){return function(t){proj.rotate(ip(t));redraw();};});}
             }
