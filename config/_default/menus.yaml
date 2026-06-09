@@ -1,12 +1,9 @@
 # Navigation Links
-# Each header is its own page. "Team" jumps to the team section on the landing page.
+# The landing page (/) holds the About + Team content, labelled "Team".
 main:
-  - name: About
+  - name: Team
     url: /
     weight: 10
-  - name: Team
-    url: /#people
-    weight: 20
   - name: News
     url: /post/
     weight: 30
