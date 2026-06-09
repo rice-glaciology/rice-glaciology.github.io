@@ -1,6 +1,7 @@
 ---
 title: Introducing the Rice Glaciology group
 date: 2025-04-10
+summary: "An overview of the Rice Glaciology group and the questions we study."
 image:
   focal_point: 'top'
 ---
