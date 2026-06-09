@@ -11,7 +11,7 @@ sections:
       title: About Us
       text: |
         <div class="about-bio">
-          <p>We are the <strong>Rice Glaciology</strong> group in the Department of Earth, Environmental and Planetary Sciences at <a href="https://earthscience.rice.edu/" target="_blank" rel="noopener">Rice University</a>. We study how ice sheets and glaciers flow, fracture, and melt &mdash; and how they will shape sea level over the coming century.</p>
+          <p>We are the <strong>Rice Glaciology</strong> group in the <a href="https://eeps.rice.edu/research/environmental-science" target="_blank" rel="noopener">Department of Earth, Environmental and Planetary Sciences</a> at Rice University. We study how ice sheets and glaciers flow, fracture, and melt &mdash; and how they will shape sea level over the coming century.</p>
 
           <p>Our work combines field and satellite geophysics with numerical modeling. We develop multi-element radar systems to image the interior and bed of glaciers, use satellite altimetry and stereo imagery to measure how ice and the land surface are changing, and build finite-element models of ice flow, firn compaction, and ocean-driven melt to interpret what we observe.</p>
 
