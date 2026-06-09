@@ -14,7 +14,6 @@ sections:
         .fw-gcol{flex:1 1 360px;min-width:280px;max-width:480px}
         .fw-gcol svg{width:100%;height:auto;display:block;cursor:grab;touch-action:none}
         .fw-gcol svg:active{cursor:grabbing}
-        .fw-hint{font-size:.8rem;color:#999;text-align:center;margin:.6rem 0 0;font-weight:300}
         .fw-side{flex:1 1 240px;min-width:220px}
         .fw-card{background:#f7f7f5;padding:1.1rem 1.25rem}
         .fw-region{font-size:.72rem;color:#4a9aab;letter-spacing:.1em;text-transform:uppercase;margin:0 0 .35rem}
@@ -23,7 +22,7 @@ sections:
         </style>
 
         <div class="fw-app">
-          <div class="fw-gcol"><div id="fw-holder"></div><p class="fw-hint">Drag to spin &middot; click a marker to learn more</p></div>
+          <div class="fw-gcol"><div id="fw-holder"></div></div>
           <aside class="fw-side">
             <div class="fw-card">
               <p class="fw-region" id="fw-region">Field sites</p>
