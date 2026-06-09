@@ -521,6 +521,16 @@ a:hover {
   letter-spacing: 0.01em !important;
 }
 
+/* Listing summary/excerpt text should read as plain text, not a link */
+.summary-link,
+.summary-link:hover,
+.summary-link:focus,
+.summary-link .article-style {
+  text-decoration: none !important;
+  color: #333 !important;
+  border-bottom: none !important;
+}
+
 /* ===========================
    PUBLICATIONS
    =========================== */
