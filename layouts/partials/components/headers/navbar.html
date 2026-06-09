@@ -1,0 +1,95 @@
+{{ $show_navbar := ((site.Params.header.navbar.enable | default true) | and (ne .Params.header.navbar.enable false)) | or .Params.header.navbar.enable }}
+{{ if $show_navbar }}
+
+{{ $current_page := . }}
+{{ $highlight_active_link := site.Params.header.navbar.highlight_active_link | default true }}
+
+{{/* Get superuser role */}}
+{{ $role := "" }}
+{{ range first 1 (where (where site.Pages "Section" "authors") ".Params.superuser" true) }}
+  {{ $role = .Params.role }}
+{{ end }}
+
+<header class="site-header-banner">
+  <div class="container-xl">
+
+    {{/* Name + Subtitle banner. Prefer a configured group subtitle, else the superuser's role. */}}
+    {{ $subtitle := site.Params.header.banner.subtitle | default $role }}
+    <div class="site-banner">
+      <a class="site-name" href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a>
+      {{ with $subtitle }}<p class="site-role">{{ . }}</p>{{ end }}
+    </div>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+      {{ if site.Menus.main }}
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      {{ end }}
+      <div class="navbar-collapse main-menu-item collapse justify-content-center" id="navbar-content">
+        <ul class="navbar-nav d-md-inline-flex">
+          {{ range site.Menus.main }}
+
+          {{ if .HasChildren }}
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+              {{- .Pre -}}<span>{{ .Name | safeHTML }}</span>{{- .Post -}}
+              <span class="caret"></span>
+            </a>
+            <div class="dropdown-menu">
+              {{ range .Children }}
+                <a class="dropdown-item" href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}>
+                  {{- .Pre -}}<span>{{ .Name | safeHTML }}</span>{{- .Post -}}
+                </a>
+              {{ end }}
+            </div>
+          </li>
+
+          {{ else }}
+
+          {{ $.Scratch.Set "target" "" }}
+          {{ if gt (len .URL) 4 }}
+            {{ if eq "http" (slicestr .URL 0 4) }}
+              {{ $.Scratch.Set "target" " target=\"_blank\" rel=\"noopener\"" }}
+            {{ end }}
+          {{ end }}
+
+          {{ $is_link_in_current_path := false }}
+          {{ $is_widget_page := or $current_page.IsHome (eq $current_page.Type "widget_page") }}
+          {{ $is_same_page := false }}
+          {{ $hash := findRE "#(.+)" .URL }}
+
+          {{ if $current_page.IsHome | and (or (eq .URL "/") (eq .URL "")) }}
+            {{ $is_link_in_current_path = true }}
+          {{else}}
+            {{ if gt (len .URL) 1 }}
+              {{ $is_link_in_current_path = in $current_page.RelPermalink .URL }}
+              {{ $is_same_page = $is_link_in_current_path }}
+            {{end}}
+            {{ if gt (len $hash) 0 }}
+              {{ $hash = index $hash 0 }}
+              {{ $hash_removed := replace .URL $hash "" }}
+              {{ if eq (len $hash_removed) 0 }}
+                {{ $hash_removed = "/" }}
+              {{ end }}
+              {{ $is_same_page = eq (path.Dir $current_page.RelPermalink) (path.Dir ($hash_removed|relLangURL)) }}
+            {{ end }}
+          {{end}}
+
+          <li class="nav-item">
+            <a class="nav-link {{if and $highlight_active_link $is_link_in_current_path }} active{{end}}" href="{{.URL | relLangURL}}"{{ if and $is_widget_page $is_same_page }} data-target="{{$hash}}"{{ end }}{{ ($.Scratch.Get "target") | safeHTMLAttr }}>
+              {{- .Pre -}}<span data-text="{{ .Name | safeHTML }}">{{ .Name | safeHTML }}</span>{{- .Post -}}
+            </a>
+          </li>
+
+          {{ end }}
+          {{ end }}
+        </ul>
+      </div>
+    </nav>
+
+  </div>
+</header>
+{{end}}

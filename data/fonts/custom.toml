@@ -1,0 +1,11 @@
+# Custom font set: Raleway headings, Source Sans 3 body
+name = "Custom"
+
+# Google Fonts API v2
+google_fonts = "family=Raleway:wght@300;400;500;600&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,300;1,400"
+
+# Font families
+heading_font = "Raleway"
+body_font = "Source Sans 3"
+nav_font = "Raleway"
+mono_font = "Roboto Mono"

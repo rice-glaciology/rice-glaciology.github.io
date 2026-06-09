@@ -1,0 +1,16 @@
+{{/* Display author list — plain text, no links, highlighted author bold */}}
+{{- $taxonomy := "authors" }}
+{{ if .Param $taxonomy }}
+  {{ range $index, $value := (.GetTerms $taxonomy) }}
+    {{- $highlight_name := .Page.Params.highlight_name | default false -}}
+    {{- if not $highlight_name -}}
+      {{- $highlight_name = strings.Contains .LinkTitle "Hoffman" -}}
+    {{- end -}}
+    {{- if gt $index 0 }}, {{ end -}}
+    {{- if $highlight_name -}}
+      <span class="author-highlighted">{{.LinkTitle}}</span>
+    {{- else -}}
+      {{.LinkTitle}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

@@ -1,0 +1,39 @@
+name: Sync publications from Google Scholar
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'  # Every Monday at 6am UTC
+  workflow_dispatch:       # Also allows manual trigger from Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install scholarly pyyaml
+
+      - name: Run Scholar sync
+        run: python3 sync_scholar.py --write
+
+      - name: Commit new publications
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/publication/
+          if git diff --cached --quiet; then
+            echo "No new publications found."
+          else
+            git commit -m "content: sync new publications from Google Scholar"
+            git push
+          fi
