@@ -1,5 +1,5 @@
 ---
-title: Research
+title: Fieldwork
 date: 2025-04-10
 
 type: landing
@@ -8,47 +8,44 @@ sections:
   - block: slider
     content:
       slides:
-      - title: 👋 Welcome to the group
-        content: Take a look at what we're working on...
-        align: center
-        background:
-          image:
-            filename: coders.jpg
-            filters:
-              brightness: 0.7
-          position: right
-          color: '#666'
-      - title: Lunch & Learn ☕️
-        content: 'Share your knowledge with the group and explore exciting new topics together!'
-        align: left
-        background:
-          image:
-            filename: contact.jpg
-            filters:
-              brightness: 0.7
-          position: center
-          color: '#555'
-      - title: World-Class Semiconductor Lab
-        content: 'Just opened last month!'
-        align: right
-        background:
-          image:
-            filename: welcome.jpg
-            filters:
-              brightness: 0.5
-          position: center
-          color: '#333'
-        link:
-          icon: graduation-cap
-          icon_pack: fas
-          text: Join Us
-          url: ../contact/
+        - title: Fieldwork
+          content: 'From the Antarctic and Greenland ice sheets to the Texas coast.'
+          align: center
+          background:
+            image:
+              filename: IMG_0694_sastrugi_south_dome_portrait.JPG
+              filters:
+                brightness: 0.6
+            position: center
+            color: '#333'
+        - title: Radar on the ice
+          content: 'Towing multi-element radar systems between survey sites.'
+          align: left
+          background:
+            image:
+              filename: IMG_0733_andrew_driving_vhf.JPG
+              filters:
+                brightness: 0.6
+            position: center
+            color: '#445'
+        - title: On traverse
+          content: 'Long days and long lines across the ice sheet.'
+          align: right
+          background:
+            image:
+              filename: IMG_6933_skiway3.jpg
+              filters:
+                brightness: 0.55
+            position: center
+            color: '#333'
+          link:
+            icon: graduation-cap
+            icon_pack: fas
+            text: Join Us
+            url: /opportunities/
     design:
-      # Slide height is automatic unless you force a specific height (e.g. '400px')
       slide_height: ''
       is_fullscreen: true
-      # Automatically transition through slides?
-      loop: false
-      # Duration of transition between slides (in ms)
-      interval: 2000
+      loop: true
+      interval: 4000
 ---

@@ -1,24 +1,24 @@
 # Navigation Links
-# Single-page sections use #anchors that match the `id` of each homepage block.
+# Each header is its own page. "Team" jumps to the team section on the landing page.
 main:
   - name: About
-    url: '#about'
+    url: /
     weight: 10
   - name: Team
-    url: '#people'
+    url: /#people
     weight: 20
   - name: News
-    url: '#news'
+    url: /post/
     weight: 30
   - name: Research
-    url: '#research'
+    url: /research/
     weight: 40
   - name: Publications
-    url: '#publications'
+    url: /publication/
     weight: 50
   - name: Fieldwork
     url: /fieldwork/
     weight: 60
   - name: Join Us
-    url: '#join_us'
+    url: /opportunities/
     weight: 70
