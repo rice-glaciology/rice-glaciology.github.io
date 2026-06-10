@@ -15,19 +15,20 @@
 
     {{/* Name + Subtitle banner. Prefer a configured group subtitle, else the superuser's role. */}}
     {{ $subtitle := site.Params.header.banner.subtitle | default $role }}
-    <div class="site-banner">
-      <a class="site-name" href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a>
-      {{ with $subtitle }}<p class="site-role">{{ . }}</p>{{ end }}
-    </div>
-
-
-    <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="banner-bar">
+      <div class="site-banner">
+        <a class="site-name" href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a>
+        {{ with $subtitle }}<p class="site-role">{{ . }}</p>{{ end }}
+      </div>
       {{ if site.Menus.main }}
       <button type="button" class="navbar-toggler" data-toggle="collapse"
               data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
         <span><i class="fas fa-bars"></i></span>
       </button>
       {{ end }}
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
       <div class="navbar-collapse main-menu-item collapse justify-content-center" id="navbar-content">
         <ul class="navbar-nav d-md-inline-flex">
           {{ range site.Menus.main }}
