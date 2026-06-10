@@ -7,7 +7,7 @@ last_name: Hoffman
 # Is this the primary user of the site?
 superuser: true
 # Role/position
-role: "Assistant Professor, Earth, Environmental & Planetary Sciences"
+role: "Assistant Professor"
 # Team groups (drive the order/sections of the Team block on the homepage)
 user_groups:
   - Principal Investigators
