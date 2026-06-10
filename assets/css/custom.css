@@ -295,21 +295,15 @@ p {
 
 /* Mobile navbar toggler button */
 @media (max-width: 991px) {
-  /* Left-aligned header: title and menu button on one row */
-  .site-header-banner {
-    text-align: left;
-  }
+  /* Centered title; menu button pinned to the left and vertically centered */
   .banner-bar {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.85rem;
-  }
-  .banner-bar .site-banner {
-    margin-bottom: 0;
-    text-align: left;
+    position: relative;
   }
   .navbar-toggler {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex !important;
     align-items: center;
     justify-content: center;
