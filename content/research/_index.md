@@ -7,7 +7,7 @@ sections:
   - block: markdown
     id: research
     content:
-      title: Research
+      title: ''
       text: |
         <div class="research-carousel">
 

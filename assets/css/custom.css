@@ -443,14 +443,20 @@ p {
   color: #888888 !important;
 }
 
-/* Gap between a list-page title (News, Publications) and the feed below it */
+/* Hide redundant list-page titles (News, Publications) — the nav already labels them */
 .universal-wrapper.pt-3 {
-  padding-bottom: 1.5rem !important;
+  display: none !important;
 }
 
 /* Hide team group subheadings (e.g., "Principal Investigators") */
 .people-widget h2 {
   display: none !important;
+}
+
+/* Slightly larger team photos */
+.people-widget .avatar {
+  width: 190px !important;
+  height: 190px !important;
 }
 
 /* ===========================

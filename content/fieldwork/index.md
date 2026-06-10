@@ -7,7 +7,7 @@ sections:
   - block: markdown
     id: fieldwork
     content:
-      title: Fieldwork
+      title: ''
       text: |
         <style>
         .fw-app{font-family:'Inter',sans-serif;display:flex;gap:2rem;flex-wrap:wrap;align-items:flex-start;justify-content:center}
