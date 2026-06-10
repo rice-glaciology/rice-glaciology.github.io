@@ -469,8 +469,19 @@ p {
   display: none !important;
 }
 
-/* Center each person's column (avatar + name/role) */
-.people-person {
+/* Team: each person's column sizes to its content and is centered.
+   (Overrides the theme's fixed 20%/30% column width, which caused the
+   enlarged avatar to overflow and sit off-center. Scales to many members.) */
+.people-widget .people-person {
+  width: auto !important;
+  max-width: none !important;
+  flex: 0 0 auto !important;
+  text-align: center !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+  margin-bottom: 2rem;
+}
+.people-widget .portrait-title {
   text-align: center !important;
 }
 
@@ -478,14 +489,12 @@ p {
 .people-widget .avatar {
   width: 200px !important;
   height: 200px !important;
-  min-width: 200px !important;
   max-width: 200px !important;
   aspect-ratio: 1 / 1 !important;
   object-fit: cover !important;
   border-radius: 50% !important;
   display: block !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  margin: 0 auto 0.75rem auto !important;
 }
 
 /* ===========================
