@@ -47,6 +47,8 @@ sections:
             {name:"Flask Glacier",region:"Antarctic Peninsula",lat:-65.8,lon:-62.3,text:"Radar and field studies of a tributary glacier in the former Larsen B embayment, where ice-shelf collapse reshaped glacier flow."},
             {name:"Hercules Dome",region:"West Antarctica",lat:-86.5,lon:-105.0,text:"Geophysical and radar surveys at a high-elevation ice dome — a candidate site for a deep ice core recording past ice-sheet and climate history."},
             {name:"South Pole",region:"East Antarctic Plateau",lat:-89.99,lon:0.0,text:"Firn, radar, and altimetry studies on the polar plateau near Amundsen–Scott South Pole Station."},
+            {name:"Nansen Ice Shelf",region:"Terra Nova Bay, Antarctica",lat:-74.9,lon:163.0,text:"Radar and field studies of an ice shelf in Terra Nova Bay, where rifts and fractures control how ice calves into the Ross Sea."},
+            {name:"McMurdo Ice Shelf",region:"Ross Island, Antarctica",lat:-78.0,lon:165.0,text:"Geophysical surveys on the McMurdo Ice Shelf near Ross Island, at the edge of the wider Ross Ice Shelf system."},
             {name:"Rothera",region:"Antarctic Peninsula",lat:-67.57,lon:-68.13,text:"Logistics hub for radar and geophysical campaigns on the Antarctic Peninsula."},
             {name:"EastGRIP",region:"Northeast Greenland",lat:75.63,lon:-35.99,text:"Polarimetric radar and firn studies at the East Greenland Ice-core Project on the Northeast Greenland Ice Stream."},
             {name:"Eqip Sermia",region:"West Greenland",lat:69.77,lon:-50.22,text:"Field studies of a fast-flowing tidewater outlet glacier in West Greenland."},
