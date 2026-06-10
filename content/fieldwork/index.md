@@ -53,7 +53,8 @@ sections:
             {name:"EastGRIP",region:"Northeast Greenland",lat:75.63,lon:-35.99,text:"Polarimetric radar and firn studies at the East Greenland Ice-core Project on the Northeast Greenland Ice Stream."},
             {name:"Eqip Sermia",region:"West Greenland",lat:69.77,lon:-50.22,text:"Field studies of a fast-flowing tidewater outlet glacier in West Greenland."},
             {name:"Texas Gulf Coast",region:"Houston, Texas",lat:29.4,lon:-94.9,text:"GNSS and InSAR networks measuring vertical land motion and relative sea-level change along the Gulf Coast."},
-            {name:"North Cascades",region:"Washington, USA",lat:48.7,lon:-121.2,text:"Glacier and seasonal-snow studies in the North Cascades of Washington State."}
+            {name:"North Cascades",region:"Washington, USA",lat:48.7,lon:-121.2,text:"Glacier and seasonal-snow studies in the North Cascades of Washington State."},
+            {name:"Susitna Glacier",region:"Alaska Range, USA",lat:63.55,lon:-146.1,text:"Surface energy-balance modeling of a glacier in the eastern Alaska Range."}
           ];
           // -----------------------------------------------------------------
           var W=460,H=460,R=212;
