@@ -203,6 +203,7 @@
   object-fit: cover;
   width: 160px;
   height: 160px;
+  aspect-ratio: 1 / 1;
   border: 3px solid white;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
@@ -443,9 +444,10 @@ p {
   color: #888888 !important;
 }
 
-/* Hide redundant list-page titles (News, Publications) — the nav already labels them */
+/* List-page titles (News, Publications) — aligned with the section-page headings */
 .universal-wrapper.pt-3 {
-  display: none !important;
+  padding-top: 5rem !important;
+  padding-bottom: 1.5rem !important;
 }
 
 /* Hide team group subheadings (e.g., "Principal Investigators") */
@@ -453,10 +455,16 @@ p {
   display: none !important;
 }
 
-/* Slightly larger team photos */
+/* Larger, perfectly round team photos */
 .people-widget .avatar {
-  width: 190px !important;
-  height: 190px !important;
+  width: 200px !important;
+  height: 200px !important;
+  min-width: 200px !important;
+  max-width: 200px !important;
+  aspect-ratio: 1 / 1 !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
+  flex: none !important;
 }
 
 /* ===========================
