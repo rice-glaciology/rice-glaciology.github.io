@@ -22,22 +22,11 @@ sections:
     design:
       columns: '1'
 
-  # ===== TEAM =====
-  - block: people
+  # ===== TEAM (driven by data/team.csv) =====
+  - block: team
     id: people
     content:
       title: Our Team
-      text: ''
-      # Filter and group team members by `user_groups` set in each author's profile.
-      user_groups:
-        - Principal Investigators
-        - Postdoctoral Researchers
-        - Graduate Students
-        - Undergraduate Students
-        - Research Staff
-        - Alumni
     design:
-      show_interests: false
-      show_role: true
-      show_social: true
+      columns: '1'
 ---

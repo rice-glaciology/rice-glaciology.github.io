@@ -1,0 +1,56 @@
+{{/* Custom block: Team grid driven by data/team.csv */}}
+{{/* Each row becomes a card. Header row maps columns to keys (case-insensitive). */}}
+{{/* Columns: name, role, group, photo, website, email, github, scholar, orcid */}}
+
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+
+{{/* Build a list of people (maps) from the CSV rows. */}}
+{{ $rows := site.Data.team }}
+{{ $people := slice }}
+{{ if $rows }}
+  {{ $header := index $rows 0 }}
+  {{ range $r := after 1 $rows }}
+    {{ $rec := dict }}
+    {{ range $i, $col := $header }}
+      {{ $key := lower (trim (string $col) " ") }}
+      {{ $val := "" }}
+      {{ if lt $i (len $r) }}{{ $val = trim (string (index $r $i)) " " }}{{ end }}
+      {{ $rec = merge $rec (dict $key $val) }}
+    {{ end }}
+    {{ if $rec.name }}{{ $people = $people | append $rec }}{{ end }}
+  {{ end }}
+{{ end }}
+
+<div class="row justify-content-center people-widget">
+  {{ with $block.content.title }}
+    <div class="section-heading col-12 mb-3 text-center">
+      <h1 class="mb-0">{{ . | markdownify | emojify }}</h1>
+      {{ with $block.content.subtitle }}<p class="mt-1">{{ . | markdownify | emojify }}</p>{{ end }}
+    </div>
+  {{ end }}
+
+  {{ range $person := $people }}
+    <div class="col-12 col-sm-auto people-person">
+      {{ with $person.photo }}
+        {{ $img := resources.Get (printf "media/team/%s" .) }}
+        {{ with $img }}
+          {{ $img = .Fill "400x400 Center" }}
+          <img class="avatar avatar-circle" width="200" height="200" loading="lazy" src="{{ $img.RelPermalink }}" alt="{{ $person.name }}">
+        {{ end }}
+      {{ end }}
+
+      <div class="portrait-title">
+        <h2>{{ $person.name }}</h2>
+        {{ with $person.role }}<h3>{{ . }}</h3>{{ end }}
+        <div class="people-social-csv">
+          {{ with $person.email }}<a href="mailto:{{ . }}" aria-label="Email"><i class="fas fa-envelope"></i></a>{{ end }}
+          {{ with $person.website }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="Website"><i class="fas fa-globe"></i></a>{{ end }}
+          {{ with $person.github }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>{{ end }}
+          {{ with $person.scholar }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>{{ end }}
+          {{ with $person.orcid }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="ORCID"><i class="ai ai-orcid"></i></a>{{ end }}
+        </div>
+      </div>
+    </div>
+  {{ end }}
+</div>

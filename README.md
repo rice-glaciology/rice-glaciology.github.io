@@ -6,14 +6,16 @@ Source for the [Rice Glaciology](https://rice-glaciology.github.io) group websit
 
 All content lives in `content/`. The homepage is assembled from blocks in `content/_index.md` (About, Team, News, Research, Publications, Join Us).
 
-### Add a team member
+### Add a team member (spreadsheet)
 
-1. Copy `content/authors/example-member/` to `content/authors/firstname-lastname/`.
-2. Edit `_index.md` (name, role, links). Put a square photo named `avatar.jpg` in the folder.
-3. Set `user_groups` to one of: `Principal Investigators`, `Postdoctoral Researchers`, `Graduate Students`, `Undergraduate Students`, `Research Staff`, `Alumni`.
-4. Set `draft: false` so the person is published.
+The Team section is generated from a spreadsheet, `data/team.csv`. To add someone:
 
-The order of groups on the Team section is set by `user_groups` in `content/_index.md`.
+1. Open `data/team.csv` in Excel, Numbers, or Google Sheets and add a row. Columns: `name, role, group, photo, website, email, github, scholar, orcid` (leave any cell blank to omit it).
+2. Save/export it back as CSV.
+3. Put their headshot in `assets/media/team/` (any size; it's auto-cropped to a circle) and put the filename in the `photo` column.
+4. Commit and push.
+
+People appear on the Team page in the order of the rows. On the next build, Hugo reads the CSV automatically — no other steps.
 
 ### Post group news
 

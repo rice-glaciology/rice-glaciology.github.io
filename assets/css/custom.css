@@ -492,6 +492,26 @@ p {
   margin: 0 auto 0.75rem auto !important;
 }
 
+/* Team card social links (data-driven team block) */
+.people-social-csv {
+  display: flex;
+  justify-content: center;
+  gap: 0.95rem;
+  margin-top: 0.5rem;
+}
+.people-social-csv a {
+  color: #000000 !important;
+  font-size: 1.05rem;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  transition: opacity 0.2s ease;
+}
+.people-social-csv a:hover {
+  opacity: 0.55;
+  color: #000000 !important;
+  border-bottom: none !important;
+}
+
 /* ===========================
    HOME SECTIONS & PAGE ALIGNMENT
    =========================== */
