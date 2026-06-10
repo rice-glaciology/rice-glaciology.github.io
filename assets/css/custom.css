@@ -443,6 +443,11 @@ p {
   color: #888888 !important;
 }
 
+/* Gap between a list-page title (News, Publications) and the feed below it */
+.universal-wrapper.pt-3 {
+  padding-bottom: 1.5rem !important;
+}
+
 /* ===========================
    HOME SECTIONS & PAGE ALIGNMENT
    =========================== */
