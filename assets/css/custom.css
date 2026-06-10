@@ -295,22 +295,15 @@ p {
 
 /* Mobile navbar toggler button */
 @media (max-width: 991px) {
-  /* Centered title; menu button pinned to the left and vertically centered */
-  .banner-bar {
-    position: relative;
-  }
+  /* Menu button centered below the title */
   .navbar-toggler {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
     display: flex !important;
     align-items: center;
     justify-content: center;
     background: none;
     border: 1px solid #000000;
     padding: 0.35rem 0.6rem;
-    margin: 0 !important;
+    margin: 0 auto 0.75rem auto;
     cursor: pointer;
     color: #000000;
     font-size: 1rem;
