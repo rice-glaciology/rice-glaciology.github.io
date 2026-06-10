@@ -313,12 +313,20 @@ p {
     color: #000000;
   }
 
-  /* White dropdown menu */
+  /* White dropdown menu, centered */
   .navbar-collapse {
     background-color: #ffffff;
     padding: 0.5rem 0 1rem 0;
     margin-top: 0.25rem;
     border-top: 1px solid #eeeeee;
+    text-align: center;
+  }
+  .navbar-collapse .navbar-nav {
+    width: 100%;
+    align-items: center;
+  }
+  .navbar-collapse .nav-item {
+    width: 100%;
   }
 
   .navbar-collapse .nav-link,
