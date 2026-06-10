@@ -8,6 +8,8 @@
     <div class="row justify-content-center">
       <div class="col-12">
 
+        <div class="section-heading mb-3 text-center"><h1 class="mb-0">{{ .Title }}</h1></div>
+
         {{ with .Content }}
         <div class="article-style">{{ . }}</div>
         {{ end }}

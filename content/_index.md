@@ -8,7 +8,7 @@ sections:
   - block: markdown
     id: about
     content:
-      title: ''
+      title: About Us
       text: |
         <div class="about-bio">
           <p>We are the <strong>Rice Glaciology</strong> group in the <a href="https://eeps.rice.edu/research/environmental-science" target="_blank" rel="noopener">Department of Earth, Environmental and Planetary Sciences</a> at Rice University. We study how ice sheets and glaciers flow, fracture, and melt &mdash; and how they will shape sea level over the coming century.</p>
