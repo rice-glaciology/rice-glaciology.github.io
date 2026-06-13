@@ -71,6 +71,8 @@ sections:
           <p>To apply, please send a CV, a brief statement of research interests, and contact information for two references to <a href="mailto:ah301@rice.edu">ah301@rice.edu</a>.</p>
 
           <p>More generally, prospective postdocs are encouraged to reach out to discuss project ideas and funding. External fellowships that fit our work well include the <a href="https://new.nsf.gov/funding/opportunities/office-polar-programs-postdoctoral-research" target="_blank" rel="noopener">NSF Office of Polar Programs Postdoctoral Fellowship</a> and the <a href="https://cpaess.ucar.edu/cgc" target="_blank" rel="noopener">NOAA Climate &amp; Global Change Postdoctoral Fellowship</a>. These have early deadlines, so please get in touch the summer before your intended start so there's time to prepare a strong application.</p>
+
+          <p>Rice also hosts internal fellowships that can support a postdoc in the group. The <a href="https://graduate.rice.edu/post-doctorates/joining-rice/rice-academy-fellows" target="_blank" rel="noopener">Rice Academy of Fellows</a> is a two-year postdoctoral fellowship open to scholars in any field, with a particular welcome for interdisciplinary work, and the <a href="https://si.rice.edu/" target="_blank" rel="noopener">Rice Sustainability Institute</a> offers a postdoctoral fellowship for research on the energy transition, climate change, and other environmental challenges, with an annual deadline of August 15. Both pair you with a faculty mentor, so reach out and we'll develop a proposal together.</p>
         </div>
     design:
       columns: '1'
@@ -83,6 +85,8 @@ sections:
       text: |
         <div class="opp-body">
           <p>Rice undergraduates interested in research with the group &mdash; during the semester or over the summer &mdash; should email Andrew at <a href="mailto:ah301@rice.edu">ah301@rice.edu</a> to ask about availability and possible projects.</p>
+
+          <p>Several Rice programs can fund undergraduate research with us. The EEPS <a href="https://eeps.rice.edu/EEPS.Explore.Research" target="_blank" rel="noopener">EXPLORE</a> program supports summer research in the Department of Earth, Environmental and Planetary Sciences, and the <a href="https://ouri.rice.edu/research-programs" target="_blank" rel="noopener">Office of Undergraduate Research and Inquiry</a> (OURI) administers research programs and funding for students at every level. We're glad to help you find the right fit and put together an application.</p>
         </div>
     design:
       columns: '1'

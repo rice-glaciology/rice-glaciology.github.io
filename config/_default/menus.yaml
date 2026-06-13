@@ -13,8 +13,8 @@ main:
   - name: Publications
     url: /publication/
     weight: 50
-  - name: Textbook
-    url: https://rice-glaciology.github.io/glaciology-book/
+  - name: Teaching
+    url: /teaching/
     weight: 55
   - name: Fieldwork
     url: /fieldwork/
