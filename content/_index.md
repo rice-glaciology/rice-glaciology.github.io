@@ -13,11 +13,11 @@ sections:
         <div class="about-bio">
           <p>We are the <strong>Rice Glaciology</strong> group in the <a href="https://eeps.rice.edu/research/environmental-science" target="_blank" rel="noopener">Department of Earth, Environmental and Planetary Sciences</a> at Rice University. We study how ice sheets and glaciers flow, fracture, and melt &mdash; and how they will shape sea level over the coming century.</p>
 
-          <p>Our work combines field and satellite geophysics with numerical modeling. We develop multi-element radar systems to image the interior and bed of glaciers, use satellite altimetry and stereo imagery to measure how ice and the land surface are changing, and build finite-element models of ice flow, firn compaction, and ocean-driven melt to interpret what we observe.</p>
+          <p>Our work in Greenland and Antarctica combines radar geophysics and satellite remote sensing with numerical modeling to measure how ice sheets are changing and use these observations to inform models of ice flow and ocean melt.</p>
 
-          <p>Closer to home, we study relative sea-level change along the Gulf Coast, combining InSAR, GNSS, and poromechanical models to map and project vertical land motion &mdash; and we work with local partners to turn those projections into tools people can plan with.</p>
+          <p>Closer to home, we study relative sea-level change along the Gulf Coast, combining InSAR, GNSS, and poromechanical models to map and project vertical land motion.</p>
 
-          <p>We are committed to open, collaborative, and reproducible science, and to building a research group where people from many backgrounds can do their best work.</p>
+          <p>We are committed to open, collaborative, and reproducible science, and to building a research group where people from all backgrounds can do their best work.</p>
         </div>
     design:
       columns: '1'
