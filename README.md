@@ -41,6 +41,10 @@ The newest posts appear on the homepage News section; the full archive is at `/p
 
 Publication entries live in `content/publication/`. They can be synced from Google Scholar with `sync_scholar.py` and the workflows in `.github/workflows/`. The homepage shows the most recent few; the full list links to Google Scholar.
 
+### Research movies
+
+Each area on the Research page (`content/research/_index.md`) has a short looping movie. The MP4s and their poster images are in `static/media/research/` and are made by the scripts in `tools/research_movies/` (see the README there). To swap in a movie of real data, put an MP4 (H.264, ideally 16:9 and under ~2 MB) and a poster JPEG in that folder and point the slide's `<video>` at it.
+
 ## Run locally
 
 Requires Hugo **extended** (matching the version in `.github/workflows/publish.yaml`):

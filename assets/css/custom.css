@@ -37,6 +37,27 @@
   padding-bottom: 0.75rem;
 }
 
+.research-movie {
+  margin: 0 0 1.25rem 0;
+}
+
+.research-movie video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+}
+
+.research-movie figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #555555;
+}
+
 .research-slide-body {
   font-weight: 100;
   line-height: 1.8;
